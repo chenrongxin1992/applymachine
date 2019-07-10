@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>深圳大学计算机与软件学院公共计算平台服务管理办法（征求意见稿）</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="/applymachine/layui/css/layui.css" media="all" />
+	<style type="text/css">
+		.ptitle{
+			font-size: 18px;
+			font-weight: bold;
+			margin:4px 0;
+		}
+		.pindext{
+			text-indent:2em; 
+			margin:4px  0;
+			font-size: 15px;
+		}
+		.pcenter{
+			text-align: center;
+			font-size: 22px;
+			font-weight: bold;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+<!--[if lt IE 9]>
+  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->    
+<div class="layui-container">
+	<div class="layui-row">
+	    <div class="layui-col-12">
+	      <p class="pcenter">深圳大学计算机与软件学院公共计算平台服务管理办法</p>
+	      <p class="pcenter">（征求意见稿）</p>
+	      <p class="pindext">为规范深圳大学计算机与软件学院公共计算平台（以下简称平台）的GPU集群系统、Kunlun小型机等计算资源的使用，合理、高效地利用资源为我院的教学科研工作服务，依照我校有关仪器设备管理使用的规定，特制定《深圳大学计算机与软件学院公共计算平台服务管理办法（试行）》（以下简称本办法）。</p>
+	      <p class="ptitle">第一条	本办法适用于深圳大学计算机与软件学院教职员工、学生（经导师批准）用户。</p>
+	      <p class="ptitle">第二条 平台可用资源</p>
+	      <p class="pindext">当前，我院可供申请使用的公共计算资源主要包括：</p>
+	      <p class="pindext">1. GPU加速虚拟机：用于进行程序设计、算法测试等用途的VMWare虚拟机。每个GPU加速虚拟机安装两块P100加速卡、4个vCPU、32GB内存、500GB磁盘空间，并预装ubuntu操作系统，配置1个校园网IP，用户可自行调整、安装软件环境（除IP地址外）。当前共计约40个虚拟机可投入使用；</p>
+	      <p class="pindext">2. GPU加速物理集群：进行性能测试、真实问题处理等用途。当前共计6台物理服务器组成机群，每台服务器安装了8块P100加速卡、2路16核Intel Xeon CPU、256GB内存、4块800GB SSD，并安装ubuntu操作系统，使用Bright Cluster Manager集群管理软件进行资源管理与作业调度；</p>
+	      <p class="pindext">3. Kunlun9016小型机：进行CPU/内存密集型程序设计、算法测试等用途。该小型机安装了16路16核Intel Xeon CPU、2TB内存、9TB硬盘空间，并安装了Windows Server2012操作系统。</p>
+	      <p class="ptitle">第三条 使用方式</p>
+	      <p class="pindext">1. GPU加速虚拟机</p>
+	      <p class="pindext">用户可通过“计算资源申请”网页(http:116.13.96.53:81/applymachine)申请创建独占使用的GPU加速虚拟机(申请之后需打印申请表，由导师签字交到822)。实验中心根据申请创建虚拟机并配置IP地址后，通过邮件将虚拟机的用户名、密码、IP地址返回给申请用户，申请用户即可通过SSH登录该虚拟机使用。使用完毕后，申请用户可通过“计算资源释放”网页退回虚拟机，由实验中心回收虚拟机占用的资源。</p>
+	      <p class="pindext">2. GPU加速物理集群</p>
+	      <p class="pindext">用户可通过“计算资源申请”网页申请创建GPU加速物理机群的账号，并通过提交作业的方式使用该机群。实验中心根据申请创建相应账号、安装附加的公共软件后，通过邮件将账号、登录地址等信息通知用户。用户登录后的所有操作都应该在账号所对应的$HOME下进行。在$HOME下，用户可以用module命令装载所需的软件模块、编译程序、连接ftp 服务器进行数据上传/下载，以及通过作业管理系统提交作业。</p>
+	      <p class="pindext">3. Kunlun9016小型机</p>
+	      <p class="pindext">用户可通过“计算资源申请”网页申请创建Kunlun9016小型机的账号，并通过Windows远程桌面连接至小型机使用。实验中心根据申请创建相应账号后，通过邮件将账号、登录地址等信息通知用户。由于小型机是所有用户共享使用，应尽可能保持原有软件环境不变（如有变动，结束使用前请恢复）。使用完毕后，申请用户可通过“计算资源释放”网页退回账号，由实验中心回收占用的资源。</p>
+	      <p class="ptitle">第四条 注意事项</p>
+	      <p class="pindext">1. GPU加速虚拟机由实验中心校园网IP（目前是172.31.233.XXX段），用户不得自行修改。</p>
+	      <p class="pindext">2. 用户申请GPU加速虚拟机的使用时间内，实验中心原则上不会对虚拟机做任何备份、停机、重启、修改、删除等操作（用户如需要进行相关操作，请联系实验中心特殊处理）。虚拟机最长申请时间为3个月，如超过3个月，需要联系实验中心特殊处理。超出申请时间后，如用户未退回虚拟机，实验中心将进行停机，并将虚拟机文件转移至备份存储，通知用户进行处理。</p>
+	      <p class="pindext">3. 使用GPU加速物理机群时，用户必须通过作业管理系统提交作业，不得在节点上直接运行作业程序，不可绕过作业管理系统使用机群，以免影响其他用户的正常作业。用户提交作业时应确保作业实际使用资源和申请的资源相符，既不会超过申请的资源影响其他用户，也不会少于申请的资源造成浪费。</p>
+	      <p class="pindext">4. 用户需自行下载备份重要的文件，平台仅提供计算服务，不提供用户文件的备份、恢复服务。</p>
+	      <p class="pindext">5. 用户应自觉遵守有关保守国家机密的各项法律规定，不利用平台计算资源泄露国家机密，或从事违法犯罪活动。</p>
+	      <p class="pindext">6. 不擅自转让、出借用户帐号，将口令随意告诉他人；也不借用他人帐户使用计算资源。</p>
+	      <p class="pindext">7. 不使用软件的或硬件的方法窃取他人口令，非法入侵他人帐户，阅读他人文件，窃取他人计算和研究成果或受法律保护的资源。</p>
+	      <p class="pindext">8. 用户不得利用平台制造和传播计算机病毒；禁止破坏数据、破坏程序或其他恶作剧行为。</p>
+	      <p class="pindext">9. 用户应对自己的作业和结果的安全负责，防止发生数据损坏、丢失和泄密的问题。</p>
+	      <p class="pindext">10. 教工离职，学生毕业后，相关账户将停用。</p>
+	      <p style="text-align: center;margin: 15px 0"><button type="button" class="layui-btn layui-btn-radius"  id="btn" ></button></p>
+	    </div>
+	</div>
+
+</div>
+<script type="text/javascript" src="/applymachine/layui/layui.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="newsAdd.js"></script> -->
+<script type="text/javascript">
+let n = 0,intervalID
+function setEnable(){
+   n++;
+    if(n==30){
+    	$('#btn').text("知道了");
+         $('#btn').removeClass('layui-btn-disabled').removeAttr('disabled',"true");
+  // 有时稍后
+  clearInterval(intervalID);
+    }else{
+    	$('#btn').addClass('layui-btn-disabled').attr('disabled',"true");
+        $('#btn').text("知道了（"+(29-n)+ "）");
+    }
+}
+intervalID = window.setInterval("setEnable()",1000);
+let index = parent.layer.getFrameIndex(window.name);
+$('#btn').on('click',function(){
+	console.log('close iframe')
+	parent.layer.close(index)
+})
+
+layui.use(['jquery','layer','form'], function(){ 
+    let $ = layui.$, //重点处
+    	laydate = layui.laydate,
+    	upload = layui.upload
+    let form = layui.form,layer = layui.layer
+
+   
+})
+</script>
+</body>
+</html>
